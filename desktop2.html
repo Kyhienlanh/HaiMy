@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Vehicles Data Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Thanh menu */
+        .navbar {
+            width: 100%;
+            max-width: 1440px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Chữ HOME */
+        .home {
+            font-size: 1.5rem;
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 5px;
+            margin-right: 40px;
+        }
+
+        /* Gạch dưới HOME */
+        .home::after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            background: black;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* Các icon trên thanh menu */
+        .icons {
+            display: flex;
+            gap: 30px;
+        }
+
+        /* Icon HOME lớn hơn và không có hiệu ứng */
+.home-icon {
+    width: 50px;   /* Tăng kích thước */
+    height: 50px;  /* Đảm bảo tỉ lệ đúng */
+    opacity: 1;    /* Không bị làm mờ */
+    filter: brightness(0); /* Chuyển thành màu đen */
+}
+
+/* Các icon khác trên menu */
+.icons img:not(.home-icon) {
+    width: 30px;  /* Kích thước mặc định */
+    opacity: 0.4; /* Làm mờ các icon khác */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover chỉ áp dụng cho các icon khác (không áp dụng cho Home) */
+.icons img:not(.home-icon):hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+        /* Bố cục nội dung chính */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            width: 90%;
+            margin-top: 50px;
+        }
+
+        .left-content {
+            max-width: 50%;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .info, .description {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .info img, .description img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        /* Nút Back */
+        .back-btn {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: 2px solid black;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: black;
+            color: white;
+        }
+
+        /* Ảnh tròn bên phải */
+        .right-content {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .right-content img {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .left-content, .right-content {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Thanh menu -->
+    <div class="navbar">
+        <div class="home">HOME</div>
+        <div class="icons">
+            <a href="desktop2.html"> <img src="img/homeclick.png" alt="Home" class="home-icon" ></a>
+            <a href="desktop3.html"><img src="img/web-page.png" alt="Analyze"></a>
+            <a href="desktop4.html"><img src="img/broom (1).png" alt="Broom"></a>
+            <a href="desktop5.html"> <img src="img/bar-chart.png" alt="Chart"></a>
+        </div>
+    </div>
+
+    <!-- Nội dung chính -->
+    <div class="container">
+        <!-- Nội dung bên trái -->
+        <div class="left-content">
+            <h1>Electric Vehicles Data Analysis</h1>
+            <div class="info">
+                <img src="img/pin.png" alt=""> TOOL: EXCEL
+            </div>
+            <div class="description">
+                <img src="img/pin.png" alt="">
+                I analyze electric vehicle data to examine growth trends and market prominence.
+                By employing statistical methods and data visualization techniques, I extract significant insights on the market for electric vehicles.
+            </div>
+            <a href="index.html" class="back-btn" style="text-decoration: none;">Back</a>
+        </div>
+
+        <!-- Hình ảnh bên phải -->
+        <div class="right-content">
+            <img src="img/xedo.jpg" alt="Car">
+        </div>
+    </div>
+</body>
+</html>

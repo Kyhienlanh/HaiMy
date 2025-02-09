@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Vehicles Data Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Thanh menu */
+.navbar {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Chữ HOME */
+.home {
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
+    margin-right: 40px;
+}
+
+/* Gạch dưới HOME */
+.home::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Các icon trên thanh menu */
+.icons {
+    display: flex;
+    gap: 30px;
+}
+
+/* Icon HOME lớn hơn và không có hiệu ứng */
+.home-icon {
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    filter: brightness(0);
+}
+
+/* Các icon khác */
+.icons img:not(.home-icon) {
+    width: 30px;
+    opacity: 0.4;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.icons img:not(.home-icon):hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Biểu đồ */
+.chart-section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.chart-section img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.chart-section p {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Thông tin liên hệ */
+footer {
+    background-image: url('img/backgound.jpg'); /* Đặt đường dẫn chính xác */
+    background-size: cover; /* Để ảnh phủ kín */
+    background-position: center; /* Căn giữa ảnh */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+    </style>
+</head>
+<body>  
+
+    <div class="navbar">
+        <div class="home">INSIGHTS</div>
+        <div class="icons">
+            <a href="desktop2.html"> <img src="img/homeclick.png" alt="Home"  ></a>
+            <a href="desktop3.html"><img src="img/web-page.png" alt="Analyze"></a>
+            <a href="desktop4.html"><img src="img/broom (1).png" alt="Broom" ></a>
+            <a href="desktop5.html"> <img src="img/bar-chart.png" alt="Chart" class="home-icon"></a>
+        </div>
+      </div>
+
+    <!-- Nội dung chính -->
+    <main>
+        <section class="chart-section">
+            <img src="img/chart5.jpg" alt="EV Brands Chart">
+            <p>📍 <b>Tesla</b> has a total of <b>76</b> cars out of 195.<br>
+            Tesla leads the market with nearly <b>40%</b>, double the second-ranked company (Nissan), affirming Tesla still dominates the electric vehicle industry.</p>
+        </section>
+
+        <section class="chart-section">
+            <img src="img/chart6.jpg" alt="EV Growth Chart">
+            <p>📍 <b>Electric vehicles</b> increased the most from <b>2017-2020</b>.<br>
+            After 2020, it has decreased compared to before. In general, electric vehicles still tend to develop.</p>
+        </section>
+    </main>
+
+    <!-- Thông tin liên hệ -->
+    <footer>
+        <h3>FOR CONTACT</h3>
+        <p><b>Name:</b> Ho Rai My</p>
+        <p><b>Phone:</b> +84 947418291</p>
+        <p><b>IDN:</b> 2132300364</p>
+        <p><b>Email:</b> my.hohai.bbs21@eiu.edu.vn</p>
+        <p><b>Location:</b>Eastern International University (EIU)</p>
+    </footer>
+
+</body>
+</html>
